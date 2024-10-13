@@ -1,2 +1,2 @@
 # pokedex
- A React.JS Pokedéx styled with FantaCSS
+ A React.JS Pokedéx 

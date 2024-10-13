@@ -134,7 +134,12 @@ export default function PokeCard(props) {
                     )
                 })}
             </div>
-            <img className='default-img' src={'/pokemon/' + getFullPokedexNumber(selectedPokemon) + '.png'} alt={`${name}-large-img`} />
+            <img 
+            className='default-img' 
+            src={`https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/detail/${getFullPokedexNumber(selectedPokemon)}.png`} 
+            alt={`${name}-large-img`} 
+            />
+
             <div className='img-container'>
                 {imgList.map((spriteUrl, spriteIndex) => {
                     const imgUrl = sprites[spriteUrl]
