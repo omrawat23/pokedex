@@ -1,0 +1,95 @@
+:root {
+    --background-primary: white;
+    --background-muted: #f8fafc;
+
+    --color-primary: #030615;
+    --color-link: #2563eb;
+    --color-link-transparent: rgba(37, 99, 235, 0.1);
+
+    --border-primary: #f1f5f9;
+    --border-secondary: #bed1e7;
+    --border-radius-small: 0.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-primary: #05070f;
+        --background-muted: #1a1e32;
+        --color-primary: white;
+        --color-link: #60a5fa;
+        --border-primary: #29325b;
+        --border-secondary: #323c71;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Eczar", serif;
+}
+
+body {
+    background: var(--background-primary);
+    color: var(--color-primary);
+    font-size: 0.875rem;
+    line-height: 1.6rem;
+}
+
+input {
+    font-size: 1em;
+    background-color: var(--background-primary);
+    border: 1px solid var(--border-secondary);
+    color: var(--color-primary);
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--border-radius-small);
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, button {
+    font-family: "Grenze", serif;
+    width: fit-content;
+}
+
+h2 { font-size: 1.5rem; line-height: 2rem; }
+h3 { font-size: 1.25rem; line-height: 1.75rem; }
+h4 { font-size: 1.125rem; line-height: 1.75rem; }
+h6 { font-size: 0.875rem; line-height: 1.25rem; }
+
+p { display: block; width: fit-content; }
+img { height: auto; }
+
+button {
+    color: var(--color-primary);
+    background-color: var(--background-primary);
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
+    padding: 0.25rem 1.25rem;
+    border: 1.5px solid var(--border-secondary);
+    border-radius: var(--border-radius-small);
+    box-shadow: 2px 2px 0 var(--border-secondary);
+    transition: transform 200ms, box-shadow 200ms;
+    cursor: pointer;
+}
+
+button:hover {
+    box-shadow: 0 0 0 0 var(--border-secondary);
+    transform: translate(2px, 2px);
+}
+
+.card {
+    background-color: var(--background-muted);
+    border: 1px solid var(--color-link-transparent);
+    color: var(--color-primary);
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+@media (min-width: 640px) {
+    body { font-size: 1rem; line-height: 1.5rem; }
+    h2 { font-size: 1.875rem; line-height: 2.25rem; }
+    h3 { font-size: 1.5rem; line-height: 2rem; }
+    h4 { font-size: 1.25rem; line-height: 1.75rem; }
+    h6 { font-size: 1rem; line-height: 1.5rem; }
+}
